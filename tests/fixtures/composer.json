@@ -1,0 +1,9 @@
+{
+  "name": "composer-custom/smoke-test",
+  "description": "Offline installation fixture for the Composer image",
+  "license": "proprietary",
+  "require": {
+    "php": ">=8.2",
+    "ext-zip": "*"
+  }
+}

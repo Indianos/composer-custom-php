@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "php": {
+    "8.2": "docker.io/library/php:8.2-cli-alpine@sha256:0814a91662f32e59ba3092a443ebb4b9915f3320b1b4688650dfc38939c6ff59",
+    "8.3": "docker.io/library/php:8.3-cli-alpine@sha256:8dbeb51c352cf1f70d5d50f3642c9fbed311e914475ea2382f5bc1525bef7bb3",
+    "8.4": "docker.io/library/php:8.4-cli-alpine@sha256:37c8c64177612b72e7f9d2c00481739c166a3708bea27c1cfd27fea1291d82d1",
+    "8.5": "docker.io/library/php:8.5-cli-alpine@sha256:93684051146ec037620855feb77f278090bde45ddc030801cd3f2a7685bc4deb"
+  },
+  "composer": {
+    "2.2": "docker.io/library/composer:2.2@sha256:269232678e5ecbe8cb13c4e416e1effab4fe9cb5f72e112de5050d1de05abf5f",
+    "2.10": "docker.io/library/composer:2.10@sha256:af98f42dfff7c68ba8d53c2164fd9fde1087b7d449514baa38c418b1f6bc4bac"
+  }
+}
