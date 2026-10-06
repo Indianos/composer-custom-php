@@ -12,7 +12,7 @@ With the supplied configuration, `indianos/composer` gets:
 | --- | --- | --- |
 | `latest` | Highest configured PHP minor, latest resolved patch | Highest configured Composer minor, latest resolved patch |
 | `phpX.Y` | Latest resolved patch in PHP X.Y | Configured default Composer line |
-| `phpX.Y-composerA.B` | Latest resolved patch in PHP X.Y | Latest resolved patch in Composer A.B |
+| `A.B-phpX.Y` | Latest resolved patch in PHP X.Y | Latest resolved patch in Composer A.B |
 
 The short PHP tags are generated for every configured PHP line. There are no
 PHP patch tags or Composer patch tags. `latest` always points to the highest

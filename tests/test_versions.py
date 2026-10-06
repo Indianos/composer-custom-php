@@ -35,13 +35,14 @@ class VersionTests(unittest.TestCase):
         tags = [tag for row in matrix for tag in row["tags"].splitlines()]
         self.assertEqual(len(tags), len(set(tags)))
         for row in matrix:
-            expected = [f"{self.config['repository']}:php{row['php']}-composer{row['composer']}"]
+            expected = [f"{self.config['repository']}:{row['composer']}-php{row['php']}"]
             if row["composer"] == self.config["default_composer"]:
                 expected.append(f"{self.config['repository']}:php{row['php']}")
             if (row["php"] == max(self.config["php"], key=versions.version_key)
                     and row["composer"] == max(self.config["composer"], key=versions.version_key)):
                 expected.append(f"{self.config['repository']}:latest")
             self.assertEqual(row["tags"].splitlines(), expected)
+            self.assertEqual(row["local_tag"], f"composer-custom:{row['composer']}-php{row['php']}")
 
     def test_latest_alias_uses_highest_configured_versions(self):
         config = {

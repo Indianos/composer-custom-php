@@ -18,7 +18,6 @@ on:
       - versions.json
       - versions.lock.json
       - scripts/**
-      - tests/**
       - .github/workflows/**
   schedule:
     - cron: '17 4 * * *'

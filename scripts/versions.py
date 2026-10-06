@@ -75,7 +75,7 @@ def build_matrix(config, lock):
     latest_composer = max(config["composer"], key=version_key)
     for php in config["php"]:
         for composer in config["composer"]:
-            tags = [f"{config['repository']}:php{php}-composer{composer}"]
+            tags = [f"{config['repository']}:{composer}-php{php}"]
             if composer == config["default_composer"]:
                 tags.append(f"{config['repository']}:php{php}")
             if php == latest_php and composer == latest_composer:
@@ -87,7 +87,7 @@ def build_matrix(config, lock):
                 "composer_image": lock["composer"][composer],
                 "platforms": ",".join(config["platforms"]),
                 "tags": "\n".join(tags),
-                "local_tag": f"composer-custom:php{php}-composer{composer}",
+                "local_tag": f"composer-custom:{composer}-php{php}",
             })
     if len(include) > 256:
         raise ValueError("Configuration exceeds GitHub Actions' 256-job matrix limit")
